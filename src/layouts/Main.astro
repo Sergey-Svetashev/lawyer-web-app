@@ -37,6 +37,8 @@ const { title } = Astro.props;
     <link href="/index.css" rel="stylesheet" />
   </head>
   <body>
-    <slot />
+    <div class="wrapper">
+      <slot />
+    </div>
   </body>
 </html>

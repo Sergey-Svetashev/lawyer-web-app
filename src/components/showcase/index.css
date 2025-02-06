@@ -1,0 +1,25 @@
+.showcase__container {
+  display: table;
+  white-space: nowrap;
+}
+.showcase__container .showcase__item {
+  display: table-cell;
+}
+.showcase__container img {
+  max-width: none;
+  margin: 10px 30px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.showcase .no-shadow {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+  .showcase img {
+    margin: 10px 20px;
+    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  }
+}

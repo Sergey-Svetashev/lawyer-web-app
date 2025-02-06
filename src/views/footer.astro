@@ -1,16 +1,17 @@
 ---
 import Title from "../components/title.astro";
+import TEXT from "../TEXT";
 ---
 
 <footer>
   <div class="container">
     <div class="footer__wrap">
       <Title text="Контакты" />
-      <p class="footer__text">+7 (908) 133-22-03</p>
+      <p class="footer__text">{TEXT.footer.phone}</p>
       <div class="footer__info">
-        <p><b>Адрес:</b> г. Воронеж, ул. Фридриха Энгельса, 48</p>
+        <p><b>{TEXT.footer.addressTitle}</b> {TEXT.footer.address}</p>
         <p>
-          <b>Я в социальных сетях:</b>
+          <b>{TEXT.footer.socialTitle}</b>
           <a
             href="https://vk.com/public174617469"
             class="footer__icon footer__icon_vk"
@@ -31,8 +32,8 @@ import Title from "../components/title.astro";
           </a>
         </p>
         <p>
-          <b>E-mail:</b>
-          <a href="mailto:igamail@inbox.ru">igamail@inbox.ru</a>
+          <b>{TEXT.footer.mailTitle}</b>
+          <a href="mailto:igamail@inbox.ru">{TEXT.footer.mail}</a>
         </p>
       </div>
     </div>
@@ -85,7 +86,7 @@ c0.5-0.1,0.9,0.1,1.1,0.5C17.8,13.5,17.8,14,17.4,14.3z"
     bottom: 0;
     right: 0;
     margin-right: -150px;
-    background: url(../img/footer_bg.jpg) right center no-repeat;
+    background: url(/footer_bg.jpg) right center no-repeat;
     background-size: contain;
     -webkit-box-shadow: inset 180px 150px 150px -100px #f9f9f9;
     box-shadow: inset 180px 150px 150px -100px #f9f9f9;
@@ -127,10 +128,14 @@ c0.5-0.1,0.9,0.1,1.1,0.5C17.8,13.5,17.8,14,17.4,14.3z"
     width: 25px;
     height: 25px;
   }
-  .footer__icon_vk:hover svg {
+  .footer__icon.footer__icon_vk:hover svg,
+  .footer__icon.footer__icon_ok:hover svg {
+    fill: #000;
+  }
+  .footer__icon_vk svg {
     fill: #4d76a1;
   }
-  .footer__icon_ok:hover svg {
+  .footer__icon_ok svg {
     fill: #e28500;
   }
 

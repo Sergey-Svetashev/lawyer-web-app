@@ -5,6 +5,26 @@ import TEXT from "../TEXT";
 import { Form } from "../views/form";
 import { FormSwitcher } from "../views/formSwitcher";
 import { Nav } from "../components/nav";
+import { Showcase } from "../components/showcase";
+
+const urls = [
+  "/skill_pict.png",
+  "/skill_item_01.jpg",
+  "/skill_item_02.jpg",
+  "/skill_item_03.jpg",
+  "/skill_item_04.jpg",
+  "/skill_item_05.jpg",
+  "/skill_item_06.jpg",
+  "/skill_item_07.jpg",
+  "/skill_item_08.jpg",
+  "/skill_item_09.jpg",
+  "/skill_item_10.jpg",
+  "/skill_item_11.jpg",
+  "/skill_item_12.jpg",
+  "/skill_item_13.jpg",
+  "/skill_item_14.jpg",
+  "/skill_item_15.jpg",
+];
 ---
 
 <Layout title={TEXT.layoutTitle}>
@@ -27,11 +47,11 @@ import { Nav } from "../components/nav";
           <div class="skill__wrap">
             <h2 class="title">{TEXT.skill.title}</h2>
             <h3 class="skill__subtitle">{TEXT.skill.subtitle}</h3>
-            <p class="honor__text">{TEXT.skill.text_01}</p>
-            <p class="honor__text">{TEXT.skill.text_02}</p>
+            <p class="skill__text">{TEXT.skill.text_01}</p>
+            <p class="skill__text">{TEXT.skill.text_02}</p>
             <FormSwitcher client:only="react" />
           </div>
-          Awards here
+          <Showcase urls={urls} client:only="react" />
         </div>
       </section>
       <section id="citation" class="citation">

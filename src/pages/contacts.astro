@@ -1,16 +1,20 @@
 ---
+import { Nav } from "../components/nav";
 import Layout from "../layouts/Main.astro";
+import Footer from "../views/footer.astro";
 ---
 
 <Layout title="Контакты Иванова Г.А.">
+  <Nav client:only="react" />
   <section class="contacts">
     <div class="container">
       <h1 class="title">Как меня найти</h1>
       <div class="contacts__map">
         <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c9be47cb89d6fdd11814570fd0d4e50f5e6e9cd602b3783bbcdbcf087a1028e&source=constructor"
-          frameborder="0"></iframe>
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c9be47cb89d6fdd11814570fd0d4e50f5e6e9cd602b3783bbcdbcf087a1028e&source=constructor"
+        frameborder="0"></iframe>
       </div>
     </div>
   </section>
+  <Footer />
 </Layout>

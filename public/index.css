@@ -52,7 +52,6 @@ body {
   display: block;
 }
 
-
 header {
   background: #1c060f;
   color: #fff;
@@ -146,7 +145,7 @@ header:after {
   top: 0;
   right: 0;
 }
-.skill .title {
+.title {
   text-transform: uppercase;
   font-size: 30px;
 }
@@ -167,31 +166,13 @@ header:after {
   display: block;
   float: right;
 }
-.honor__text {
+.skill__text {
   line-height: 1.6;
   padding: 10px 0;
   text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
 }
 .skill__slider {
   padding: 30px 0 0;
-}
-.skill__slider .slick-list {
-  overflow: visible !important;
-}
-.skill__cell {
-  padding: 0 30px;
-}
-.skill__item {
-  padding: 10px;
-}
-.skill__item img {
-  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-  margin: 0 auto;
-}
-.skill__item .no-shadow {
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 .citation {
   position: relative;
@@ -331,8 +312,8 @@ header:after {
 .contacts {
   padding-top: 65px;
 }
-.contacts .title {
-  color: #000;
+.services .title {
+  color: #fff;
 }
 .contacts__map {
   padding-top: 10px;
@@ -426,29 +407,11 @@ header:after {
     width: 60%;
     padding-bottom: 100px;
   }
-  .honor__text {
+  .skill__text {
     padding: 10px 70px 10px 0;
   }
-  .skill .title {
+  .title {
     font-size: 50px;
-  }
-  .slick-arrow {
-    width: 30px;
-    height: 30px;
-  }
-  .slick-arrow:before,
-  .slick-arrow:after {
-    margin: 4px 0;
-  }
-  .skill__cell {
-    padding: 0 10px;
-  }
-  .skill__item {
-    padding: 20px;
-  }
-  .skill__item img {
-    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
   }
   .citation {
     padding: 100px 0;
@@ -516,7 +479,7 @@ header:after {
   .services__price:after {
     width: 380px;
   }
-  
+
   .contacts {
     padding-top: 100px;
   }
@@ -527,4 +490,3 @@ header:after {
     min-height: 576px;
   }
 }
-
