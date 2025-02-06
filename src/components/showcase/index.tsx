@@ -1,56 +1,40 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./index.css";
 
-export const Showcase = ({ urls }: { urls: Array<string> }) => {
-  const showcase = useRef<HTMLDivElement>(null);
-  const lastImage = useRef<HTMLImageElement>(null);
-  const [loadedImages, setLoadedImages] = useState<Array<boolean>>([]);
-  
-  const imageLoadHandler = useCallback((index: number) => {
-    const updatedLoadedImages = [...loadedImages];
-
-    updatedLoadedImages[index] = true;
-    setLoadedImages(updatedLoadedImages);
-  }, []);
-
-  useEffect(() => {
-    if (
-      loadedImages.length === urls.length &&
-      loadedImages.reduce<boolean>((_, curr) => curr, true) &&
-      lastImage.current?.offsetWidth
-    ) {
-      showcase.current?.animate(
-        [
-          { transform: "translateX(0)" },
-          {
-            transform: `translateX(-${
-              showcase.current?.offsetWidth - lastImage.current.offsetWidth
-            }px)`,
-          },
-        ],
-        {
-          duration: 3000 * urls.length,
-          iterations: Infinity,
-          direction: "alternate",
-        }
-      );
-    }
-  }, [loadedImages]);
-
-  return (
-    <div className="showcase">
-      <div id="showcase" className="showcase__container" ref={showcase}>
-        {urls.map((url, index) => (
-          <div className="showcase__item">
-            <img
-              src={url}
-              alt="alt"
-              onLoad={() => imageLoadHandler(index)}
-              ref={lastImage}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+export const Showcase = ({ urls }: { urls: Array<string> }) => (
+  <div className="showcase">
+    <Swiper
+      pagination={{
+        dynamicBullets: true,
+      }}
+      modules={[Autoplay, Pagination]}
+      autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
+      slidesPerView={1}
+      loop={true}
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+        1170: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      }}
+    >
+      {urls.map((url, index) => (
+        <SwiperSlide>
+          <img
+            className={index === 0 ? "no-shadow" : ""}
+            src={url}
+            alt="award"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+);
