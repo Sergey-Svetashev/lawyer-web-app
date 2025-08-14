@@ -2,12 +2,12 @@ import "./index.css";
 
 export const Button = ({
   text,
-  callback,
+  onClick,
   type = "button",
   disabled = false,
 }: {
   text: string;
-  callback?: () => void;
+  onClick?: () => void;
   type?: "submit" | "button";
   disabled?: boolean;
 }) => (
@@ -17,7 +17,7 @@ export const Button = ({
     //   uppercase text-white text-lg bg-aubergine border-4 border-solid border-aubergine
     //   cursor-pointer shadow-light transition-all duration-300 relative hover:translate-y-1 hover:shadow-inset-white`}
     className="button"
-    onClick={callback}
+    onClick={onClick}
     disabled={disabled}
   >
     {text}

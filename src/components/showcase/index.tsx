@@ -1,8 +1,8 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./index.css";
 
 export const Showcase = ({ urls }: { urls: Array<string> }) => (
@@ -27,7 +27,7 @@ export const Showcase = ({ urls }: { urls: Array<string> }) => (
       }}
     >
       {urls.map((url, index) => (
-        <SwiperSlide>
+        <SwiperSlide key={`${url}_${index}`}>
           <img
             className={index === 0 ? "no-shadow" : ""}
             src={url}

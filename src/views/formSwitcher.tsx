@@ -8,7 +8,7 @@ export const FormSwitcher = () => {
 
   return (
     <Button
-      callback={state.toggleFormState}
+      onClick={state.toggleFormState}
       disabled={context.isFormOpen}
       text={TEXT.orderButton}
     />

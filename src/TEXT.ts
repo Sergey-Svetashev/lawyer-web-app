@@ -107,13 +107,15 @@ export default {
     mail: "Ваш e-mail",
     message: "Введите сообщение",
     submit: "Отправить",
+    required: "Пожалуйста, заполните это поле.",
+    requiredEmail: "Пожалуйста, введите корректный почтовый адрес.",
   },
   footer: {
-    phone: '+7 (908) 133-22-03',
-    addressTitle: 'Адрес:',
-    address: 'г. Воронеж, ул. Фридриха Энгельса, 48',
-    socialTitle: 'Я в социальных сетях:',
-    mailTitle: 'E-mail:',
-    mail: 'igamail@inbox.ru',
-  }
+    phone: "+7 (908) 133-22-03",
+    addressTitle: "Адрес:",
+    address: "г. Воронеж, ул. Фридриха Энгельса, 48",
+    socialTitle: "Я в социальных сетях:",
+    mailTitle: "E-mail:",
+    mail: "igamail@inbox.ru",
+  },
 };
