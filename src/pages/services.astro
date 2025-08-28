@@ -1,0 +1,32 @@
+---
+import TEXT from '../TEXT';
+import { Nav } from "../components/nav";
+import Layout from '../layouts/Main.astro';
+import Footer from "../views/footer.astro";
+---
+
+<Layout title={TEXT.layoutTitle}>
+  <Nav client:only="react" />
+  <section class="services">
+    <div class="container">
+      <h1 class="title">{TEXT.services.title}</h1>
+      <div class="services__wrap">
+        {TEXT.services.cases.map((service) => (
+          <div class="services__case services__case_01">
+            {service.map((item) => (
+              <div class="services__item">
+                <div class="services__cell">
+                  <p class="services__text">{item.text}</p>
+                </div>
+                <div class="services__cell">
+                  <div class="services__price">{item.price}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

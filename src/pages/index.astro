@@ -1,10 +1,30 @@
 ---
+import { Nav } from "../components/nav";
+import { Showcase } from "../components/showcase";
 import Layout from "../layouts/Main.astro";
-import Footer from "../views/footer.astro";
 import TEXT from "../TEXT";
+import Footer from "../views/footer.astro";
 import { Form } from "../views/form";
 import { FormSwitcher } from "../views/formSwitcher";
-import { Nav } from "../components/nav";
+
+const urls = [
+  "/skill_pict.png",
+  "/skill_item_01.jpg",
+  "/skill_item_02.jpg",
+  "/skill_item_03.jpg",
+  "/skill_item_04.jpg",
+  "/skill_item_05.jpg",
+  "/skill_item_06.jpg",
+  "/skill_item_07.jpg",
+  "/skill_item_08.jpg",
+  "/skill_item_09.jpg",
+  "/skill_item_10.jpg",
+  "/skill_item_11.jpg",
+  "/skill_item_12.jpg",
+  "/skill_item_13.jpg",
+  "/skill_item_14.jpg",
+  "/skill_item_15.jpg",
+];
 ---
 
 <Layout title={TEXT.layoutTitle}>
@@ -15,9 +35,11 @@ import { Nav } from "../components/nav";
         <div class="container">
           <div class="header__wrap">
             <img src="/header_photo.png" alt={TEXT.alts.main} />
-            <h2 class="header__over-title">{TEXT.header.title}</h2>
-            <h3 class="header__title">{TEXT.header.subtitle}</h3>
-            <h1 class="header__headline">{TEXT.header.text}</h1>
+            <h3 class="header__title">
+              {TEXT.header.familyName}<br />{TEXT.header.nameMiddleName}
+            </h3>
+            <h1 class="header__over-title">{TEXT.header.title}</h1>
+            <h2 class="header__headline">{TEXT.header.subtext}</h2>
             <FormSwitcher client:only="react" />
           </div>
         </div>
@@ -27,26 +49,26 @@ import { Nav } from "../components/nav";
           <div class="skill__wrap">
             <h2 class="title">{TEXT.skill.title}</h2>
             <h3 class="skill__subtitle">{TEXT.skill.subtitle}</h3>
-            <p class="honor__text">{TEXT.skill.text_01}</p>
-            <p class="honor__text">{TEXT.skill.text_02}</p>
+            <p class="skill__text">{TEXT.skill.text_01}</p>
+            <p class="skill__text">{TEXT.skill.text_02}</p>
             <FormSwitcher client:only="react" />
           </div>
-          Awards here
+          <Showcase urls={urls} client:only="react" />
         </div>
       </section>
-      <section id="citation" class="citation">
+      <section id="quote" class="quote">
         <div class="container">
           <h2 class="title">{TEXT.quote.title}</h2>
-          <div class="citation__case">
-            <div class="citation__cell">
-              <p class="citation__text">{TEXT.quote.text}</p>
-              <img src="/icon_qoutes.svg" class="citation__decore" />
+          <div class="quote__case">
+            <div class="quote__cell">
+              <p class="quote__text">{TEXT.quote.text}</p>
+              <img src="/icon_quotes.svg" class="quote__decore" />
             </div>
-            <div class="citation__cell">
+            <div class="quote__cell">
               <img
-                src="/citation_photo.jpg"
+                src="/quote_photo.jpg"
                 alt={TEXT.alts.main}
-                class="citation__photo"
+                class="quote__photo"
               />
             </div>
           </div>

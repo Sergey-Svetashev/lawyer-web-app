@@ -25,14 +25,3 @@ export class State implements StateShape {
 }
 
 export const state = new State();
-
-// export const state = atom({
-//   isFormOpen: false,
-// });
-
-// export const toggleFormState = () => {
-//     const prev = state.get();
-
-//     state.set({ isFormOpen: !prev.isFormOpen });
-//     console.log('in state', prev, !state.get())
-//   }

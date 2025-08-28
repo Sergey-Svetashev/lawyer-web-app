@@ -3,7 +3,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(49, 29, 36, 0.8);
+  background: rgba(100, 150, 215, 0.95);
   -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   z-index: 5;
@@ -22,7 +22,7 @@ nav span {
   left: 0;
   width: 100%;
   padding: 50px 0;
-  background: #311d24;
+  background: rgb(55, 85, 120);
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
