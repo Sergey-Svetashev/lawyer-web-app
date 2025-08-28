@@ -35,9 +35,11 @@ const urls = [
         <div class="container">
           <div class="header__wrap">
             <img src="/header_photo.png" alt={TEXT.alts.main} />
-            <h2 class="header__over-title">{TEXT.header.title}</h2>
-            <h3 class="header__title">{TEXT.header.subtitle}</h3>
-            <h1 class="header__headline">{TEXT.header.text}</h1>
+            <h3 class="header__title">
+              {TEXT.header.familyName}<br />{TEXT.header.nameMiddleName}
+            </h3>
+            <h1 class="header__over-title">{TEXT.header.title}</h1>
+            <h2 class="header__headline">{TEXT.header.subtext}</h2>
             <FormSwitcher client:only="react" />
           </div>
         </div>
@@ -54,19 +56,19 @@ const urls = [
           <Showcase urls={urls} client:only="react" />
         </div>
       </section>
-      <section id="citation" class="citation">
+      <section id="quote" class="quote">
         <div class="container">
           <h2 class="title">{TEXT.quote.title}</h2>
-          <div class="citation__case">
-            <div class="citation__cell">
-              <p class="citation__text">{TEXT.quote.text}</p>
-              <img src="/icon_qoutes.svg" class="citation__decore" />
+          <div class="quote__case">
+            <div class="quote__cell">
+              <p class="quote__text">{TEXT.quote.text}</p>
+              <img src="/icon_quotes.svg" class="quote__decore" />
             </div>
-            <div class="citation__cell">
+            <div class="quote__cell">
               <img
-                src="/citation_photo.jpg"
+                src="/quote_photo.jpg"
                 alt={TEXT.alts.main}
-                class="citation__photo"
+                class="quote__photo"
               />
             </div>
           </div>
